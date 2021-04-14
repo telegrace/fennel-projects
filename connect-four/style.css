@@ -1,0 +1,150 @@
+* {
+	margin: 0px;
+	/*box-sizing: border-box; */
+}
+
+body {
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	background-color: lightblue;
+	text-align: center;
+}
+.outerBox {
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	width: 80%;
+	height: 80%;
+	background-color: azure;
+	z-index: 1;
+	border: solid 20px #38369a;
+	visibility: hidden;
+}
+
+.restart {
+	position: relative;
+	left: 10%;
+	top: 35%;
+	width: 80%;
+	height: 75%;
+	font-size: 3em;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.information {
+	position: relative;
+	margin: 0 auto;
+	width: 600px;
+	padding: 10px;
+	height: 155px;
+}
+
+h1 {
+	color: #38369a;
+	line-height: 70px;
+	font-size: 4em;
+	padding: 10px;
+}
+
+#player {
+	position: relative;
+	border: black 5px solid;
+	line-height: 40px;
+	padding: 5px;
+	width: 140px;
+	font-weight: bold;
+}
+
+.p1 {
+	left: 10%;
+	float: left;
+	animation: slide 0.5s alternate infinite;
+}
+
+.p2 {
+	right: 10%;
+	float: right;
+}
+
+.container {
+	padding-top: 20px;
+	border: mistyrose;
+}
+
+#board {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.slot {
+	overflow: hidden;
+	width: 100px;
+	height: 100px;
+}
+
+.hole {
+	transform: translate(-30px, -30px);
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	border: 40px solid #38369a;
+	background-color: transparent;
+}
+/*
+.column1 .row4 {
+    background-color: hotpink;
+}*/
+
+.player1 {
+	background-color: #fff689;
+}
+
+.player2 {
+	background-color: #fe6d73;
+}
+/*
+#movingDiv {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+*/
+@keyframes slide {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(20px);
+	}
+}
+
+.winnerP1 {
+	position: relative;
+	background-color: #fff689;
+	left: 15%;
+	top: 10%;
+	width: 70%;
+	visibility: hidden;
+	z-index: 4;
+}
+
+.winnerP2 {
+	background-color: #fe6d73;
+	position: relative;
+	left: 15%;
+	top: -10%;
+	width: 70%;
+	visibility: hidden;
+	z-index: 3;
+}
