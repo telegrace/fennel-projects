@@ -1,0 +1,13 @@
+<div id="form-container">
+    <form method='POST'>
+        <p>Feel free to share info so fellow disco-goers can connect with you!</p>
+        <input type='text' name='age' placeholder='age' autocomplete='off'><br>
+        <input type='text' name='city' placeholder='city' autocomplete='off'><br>
+        <input type='text' name='website' placeholder='your website' autocomplete='off'><br>
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+        <div id = "button-container">
+        <button id="submit"> Submit </button><button id="clear"> Skip </button>
+        </div>
+    </form>
+</div> 

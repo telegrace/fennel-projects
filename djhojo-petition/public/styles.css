@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    background-color: #feffa8;
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+}
+h1 {
+    padding: 20px;
+    font-size: 4em;
+    color: #6affbe;
+}
+header h1:hover {
+    color: #ffb2ff;
+}
+
+#form-container {
+    text-align: left;
+    min-height: 540px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: white;
+}
+form {
+    box-shadow: 10px 10px dimgray;
+    margin: 0 auto;
+    padding: 40px;
+    min-height: 500px;
+    width: 400px;
+    background-color: #ff9c79;
+}
+#error h4 {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    position: fixed;
+    text-align: center;
+    margin: 10px;
+    color: white;
+    width: 500px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 10px;
+    background-color: #a08bff;
+    box-shadow: 5px 5px dimgray;
+}
+#thank-you h4 {
+    animation: 1s ease-out 0s 1 slideInFromTop;
+    position: fixed;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    color: white;
+    height: 50px;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 10px;
+    background-color: #a08bff;
+    box-shadow: 5px 5px dimgray;
+}
+#namelist {
+    box-shadow: 10px 10px dimgray;
+    margin: 0 auto;
+    padding: 40px;
+    min-height: 500px;
+    width: 400px;
+    background-color: #ff9c79;
+}
+
+#namelist h3 {
+    background-color: #ff9c79;
+    color: #feffa8;
+
+    padding: 5px;
+}
+
+#namelist p {
+    background-color: #ff9c79;
+    color: #feffa8;
+
+    padding: 5px;
+}
+
+#namelist ul {
+    color: #feffa8;
+    background-color: #ff9c79;
+}
+#namelist li {
+    color: #feffa8;
+    padding: 5px;
+    background-color: #ff9c79;
+}
+
+#namelist li a {
+    padding: 2px;
+
+    text-decoration: none;
+    background-color: #ffb2ff;
+}
+#namelist li a:hover {
+    background-color: #6affbe;
+}
+
+#namelist h4 {
+    float: left;
+    margin-left: -10px;
+    padding: 4px;
+    background-color: #ff9c79;
+    color: #feffa8;
+}
+
+.dj {
+    background-color: #ff9c79;
+    color: #6affbe;
+}
+.dj:hover {
+    color: #6affbe;
+    color: #ffb2ff;
+}
+
+nav a {
+    margin: 5px;
+    padding: 5px;
+    text-decoration: none;
+}
+nav a:hover {
+    background: #ff9c79;
+}
+
+img {
+    width: 320px;
+    height: 100px;
+}
+
+form h4 {
+    padding: 5px;
+    width: 320px;
+    margin-top: 20px;
+}
+
+form p {
+    display: inline-block;
+    background-color: #ff9c79;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+form p a {
+    background-color: #ff9c79;
+}
+form p a:hover {
+    color: #feffa8;
+}
+
+input:first-child {
+    margin-top: 30px;
+}
+input {
+    margin-bottom: 30px;
+    width: 320px;
+}
+#button-container {
+    display: block;
+    color: #ff9c79;
+    margin: 10px;
+    margin-bottom: 50px;
+}
+
+button {
+    font-size: 15px;
+    padding: 5px;
+    display: block;
+    color: #a08bff;
+    box-shadow: 5px 5px dimgrey;
+}
+#clear {
+    float: right;
+    font-size: 15px;
+    display: block;
+    float: right;
+    color: #a08bff;
+    border: 1px solid lightgrey;
+    box-shadow: 5px 5px dimgrey;
+    padding: 5px;
+}
+#submit {
+    float: left;
+}
+#remove {
+    float: left;
+}
+#signin {
+    float: right;
+}
+
+button:hover {
+    box-shadow: none;
+    transform: translateY(5px);
+    transform: translateX(5px);
+}
+
+#clear a {
+    color: #a08bff;
+    text-decoration: none;
+}
+
+#clear:hover {
+    box-shadow: none;
+    transform: translateY(5px);
+    transform: translateX(5px);
+}
+
+#canv {
+    margin-bottom: 20px;
+}
+footer {
+    display: block;
+    background-color: #a08bff;
+    bottom: 20px;
+    height: 40px;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+}
+
+.alignleft {
+    background-color: #a08bff;
+    float: left;
+}
+.alignright {
+    background-color: #a08bff;
+    float: right;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

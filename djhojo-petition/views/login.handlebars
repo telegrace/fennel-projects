@@ -1,0 +1,13 @@
+<div id="form-container">
+    <form method='POST'>
+        <p>Please sign in.</p>
+        <input type='text' name='email' placeholder='email address' autocomplete='off'><br>
+        <input type='password' name='password' placeholder='password' autocomplete='off'><br>  
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+        <p>Don't have an account? Sign up :)</p>
+        <div id = "button-container">
+        <button id="submit"> Sign In </button><div id="clear"><a href="register"> Sign Up</a> </div>
+        </div>
+    </form>
+</div>

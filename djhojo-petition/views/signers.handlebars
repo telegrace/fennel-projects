@@ -1,0 +1,18 @@
+<div id="form-container">
+    <div id = "namelist">
+        <h3>TOGETHER WE RAVE</h3>
+        <p>We the undersigned want to show our support to DJ HOJO and kindly demand a European tour.</p>   
+        <br>
+        <ul>
+        {{#each signers}}
+            <li><a href="{{website}}">{{name}} {{surname}}</a>, {{age}}, {{city}}</li>
+        {{/each}} 
+        </ul>
+        <br>
+        <div id = "button-container">
+        <h4>Find people in your city!<br></h4>
+        <div id="clear"><a href="signers/city/{{city}}"> let's go! </a>
+        </div>
+    </div>
+</div>
+

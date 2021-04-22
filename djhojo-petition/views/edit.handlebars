@@ -1,0 +1,25 @@
+<div id="form-container">
+    <form method='POST'>
+        Edit the details you want to change and press update.
+        <br>
+        <br>
+        Name:
+        <input type='text' name='name' value='{{name}}'xx autocomplete='off'>
+        Surname:
+        <input type='text' name='surname' value='{{surname}}' autocomplete='off'>
+        Email:
+        <input type='text' name='email' value='{{email}}' autocomplete='off'>
+        Password:
+        <input type='password' name='password' placeholder='type new password' autocomplete='off'>
+        Age:
+        <input type='text' name='age' value='{{age}}' autocomplete='off'>
+        City:
+        <input type='text' name='city' value='{{city}}' autocomplete='off'>
+        Website:
+        <input type='text' name='website' value='{{website}}' autocomplete='off'>
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+        <div id = "button-container">
+        <button id="submit"> update </button>
+        </div>
+    </form>
+</div> 
