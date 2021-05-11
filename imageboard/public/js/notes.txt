@@ -1,0 +1,8 @@
+Allow users to comment
+request more 
+
+add more button, run ajax to get next set of images 
+
+button disappears 
+
+lowest id in the table with query 

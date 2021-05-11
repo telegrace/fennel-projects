@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Board</title>
+        <link rel="stylesheet" href="/style.css" />
+    </head>
+    <body>
+        <header>
+            <h2>IMAGE BOARD</h3>
+        </header>     
+            
+        <div id = "container">
+            <form id = "upload">
+                <input v-model="title" type="text" name="title" placeholder="TITLE">
+                <input v-model="description" type="text" name="description" placeholder="DESCRIPTION">
+                <input v-model="username" type="text" name="username" placeholder="USERNAME">
+                <input @change="handleChange" type="file" name="file" accept="image/*">
+                <button @click="handleUploadClick">UPLOAD AN IMAGE</button>
+            </form>
+            <br>
+            <h1>LASTEST PICTURES</h1>
+            <div id="img-card" v-for="img in images" :key="img.id">
+                <a :href= "'#'+ img.id">
+                    <div>
+                        <h3>{{img.title}}</h3> 
+                        <img :src="img.url" alt="image"/>
+                    </div>
+                </a>
+            </div>
+            <br>
+            <div>
+                <button v-if="more"  @click="nextImages">NEXT >> </button>
+            </div>
+
+            <my-first-component v-if="imgSelected" :img-id="imgSelected" just-another-prop="🍸" @close="closeComponent"></my-first-component>
+        </div>
+        <!--------------------------------------MODAL TEMPLATE-------------------------------------->
+        <script id="my-component-template" type="text/x-template">
+            <div>
+                <div id="component-enlarge">
+                    <h2>{{title}}</h2> 
+                    <img :src="image.url" alt="image"/>
+                    <br>
+                    <p>{{description}}</p>
+                    <p>Posted by {{username}} at {{created_at}}</p>
+                    <br>
+                    <my-second-component :img-id="imgId"></my-second-component>
+                    <br>
+                    <button @click.prevent="imageBack"> << BACK </button>
+                    <button @click="notifyParentToDoSth">CLOSE</button>
+                    <button @click.prevent="imageNext"> NEXT >> </button>
+
+                </div>
+            </div>
+        </script>
+        <!--------------------------------------MODAL TEMPLATE-------------------------------------->
+
+
+        <!--------------------------------------COMMENT TEMPLATE-------------------------------------->
+        <script id="my-comment-template" type="text/x-template">
+            <div>
+                <p> Lastest comments</p>
+                <div id="component-comments" v-for="comment in comments" :key="comment.id">
+                    <h4>{{comment.author}} says "{{comment.comment}}"</h4>
+                </div>
+                    <form>
+                        <input v-model="comment" type="text" name="comment" placeholder="LEAVE A COMMMENT">
+                        <input v-model="author" type="text" name="author" placeholder="USERNAME">
+                        <button @click.prevent="addComment">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </script>
+
+
+   
+        <script src="/js/vue.js"></script>
+        <script src="/js/axios.min.js"></script>
+        <script src="/js/script.js"></script>
+    </body>
+</html>

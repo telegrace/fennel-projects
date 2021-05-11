@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+}
+
+header {
+    background-color: #faf3dd;
+    color: #ffa69e;
+    padding: 20px;
+    font-size: 2em;
+}
+
+body {
+    color: #5e6472;
+    background-color: #b8f2e6;
+}
+
+#container {
+    padding: 10px;
+}
+
+form input {
+    text-align: left;
+    background-color: #faf3dd;
+    height: 40px;
+    width: 300px;
+    margin: 20px;
+    margin-left: 0;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    color: dimgrey;
+    border: 1px solid dimgrey;
+    padding: 5px;
+}
+
+button {
+    background-color: #faf3dd;
+    font-size: 15px;
+    font-weight: bold;
+    height: 40px;
+    width: 160px;
+    color: dimgrey;
+    border: 1px solid dimgrey;
+    box-shadow: 5px 5px dimgrey;
+    padding: 5px;
+}
+button:hover {
+    background-color: #ffa69e;
+    color: #faf3dd;
+    box-shadow: none;
+    transform: translateY(5px);
+    transform: translateX(5px);
+}
+
+#img-card {
+    display: inline-block;
+    height: 380px;
+    width: 500px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #faf3dd;
+    box-shadow: 5px 5px dimgrey;
+}
+
+#img-card:hover {
+    box-shadow: none;
+    transform: translateY(5px);
+    transform: translateX(5px);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    width: 320px;
+    height: 240px;
+    object-fit: cover;
+}
+
+#more-buttons {
+    margin: 20px;
+}
+
+#container #component-enlarge {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    position: fixed;
+    left: 25%;
+    top: 15%;
+    background-color: lightblue;
+    display: inline-block;
+    min-height: 520px;
+    width: 700px;
+    margin: 20px;
+    padding: 20px;
+    border: dimgrey solid 1px;
+    box-shadow: 10px 10px dimgrey;
+    z-index: 1;
+}
+
+#container #component-enlarge img {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+}
+#container #component-enlarge p:last-child {
+    text-align: left;
+}
+
+#container #component-comment {
+    background-color: #fff;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
